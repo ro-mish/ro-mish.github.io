@@ -22,8 +22,9 @@ nav ul li a {
 }
 
 header {
-    text-align: center;
-    padding: 2em;
+    text-align: left;
+    padding: 10em;
+    
     align-items: center;
     justify-content: center;
     font-size: 120%;
@@ -55,7 +56,7 @@ h1{
 
 #bio div {
     text-align: left;
-    font-size: 125%;
+    font-size: 100%;
     max-width: 40%;
     
 }
@@ -122,6 +123,6 @@ html {
 
 
 #page {
-    width: 1200px;
     justify-content: center;
+    margin-right: 2em;
 }
