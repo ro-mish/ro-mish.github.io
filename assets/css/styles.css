@@ -2,24 +2,7 @@ body {
     font-family: 'Helvetica', sans-serif;
 }
 
-nav {
-    padding: 1em;
-}
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(227, 223, 223);
-}
 
 header {
     text-align: left;
@@ -48,10 +31,10 @@ h1{
 }
 
 #bio img {
-    width: 350px;
+    width: 25%;
     height: auto;
-    border-radius: 4%;
-    margin-right: 2em;
+    border-radius: 100%;
+    margin-right: 2%;
 }
 
 #bio div {
