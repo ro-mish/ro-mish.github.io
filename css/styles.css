@@ -1,8 +1,6 @@
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial';
 }
-
-
 
 header {
     text-align: left;
@@ -31,31 +29,17 @@ h1{
 }
 
 #bio img {
-    width: 25%;
+    width: 20em;
     height: auto;
-    border-radius: 100%;
-    margin-right: 2%;
+    border-radius: 100em;
+    margin-right: 2em;
 }
 
 #bio div {
     text-align: left;
-    font-size: 100%;
-    max-width: 40%;
+    font-size: 1em;
+    max-width: 40em;
     
-}
-
-#bio div a {
-    margin-bottom: 70px;
-    
-}
-
-
-/* show correct dark mode icon */
-html.dark #button-dark-mode #light-mode-icon {
-    @apply hidden;
-}
-html:not(.dark) #button-dark-mode #dark-mode-icon {
-    @apply hidden;
 }
 
 main {
@@ -65,7 +49,7 @@ main {
 }
 
 #projects, #blog-posts {
-    width: 45%;
+    width: 45em;
 }
 
 footer {
@@ -74,36 +58,30 @@ footer {
 }
 
 footer img {
-    width: 30px;
-    height: 30px;
+    width: 30em;
+    height: 30em;
 }
 
 #socials {
     display: flex;
     align-items: center;
-    max-width: 40%;
+    max-width: 40em;
     gap: 1em;
 }
 
 #socials img {
-    width: 30px;
-    height: 30px;
-    
-    
+    width: 2em;
+    height: 2em;    
 }
 
 body {
     align-items: center;
     justify-content: center;
-   
-
 }
 
 html {
     background-color:#fff8f2;
 }
-
-
 
 #page {
     justify-content: center;
