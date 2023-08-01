@@ -3,40 +3,67 @@ body {
 }
 
 header {
-    text-align: left;
-    padding: 10em;
-    
-    align-items: center;
+    padding-top: 10em;
+    margin-right: auto;
+    margin-left: auto;
     justify-content: center;
-    font-size: 120%;
-    background-color: #fff8f2;
+    vertical-align: middle;
 }
 
-h1{
-    font-size: 50px;
-    text-decoration: solid;
+#name {
+    font-size: 130%;    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    
+}
+
+#pagebreak {
+    width: 100%;
 }
 
 #bio {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff8f2;
+    margin-left: auto;
+    margin-right: auto;    
+
 }
 
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 4vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 #bio div p {
     font-size: 125%;
 }
+hr {
+    width: 15%;    
 
-#bio img {
-    width: 20em;
-    height: auto;
-    border-radius: 100em;
-    margin-right: 2em;
+}
+#photo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    border-radius: 100%;
+    width: 20%;
+    height: 10%;
+    border-width: 10%;
+    border-style: solid;
+    
 }
 
 #bio div {
-    text-align: left;
+    justify-content: center;
     font-size: 1em;
     max-width: 40em;
     
@@ -63,27 +90,38 @@ footer img {
 }
 
 #socials {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 40em;
+    max-width: 1%;
+    width: 2%;
+    height: 1%;
     gap: 1em;
 }
 
 #socials img {
     width: 2em;
-    height: 2em;    
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;    
 }
 
 body {
     align-items: center;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html {
-    background-color:#fff8f2;
+    background-color:#ffffff75;    
 }
 
 #page {
     justify-content: center;
     margin-right: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
