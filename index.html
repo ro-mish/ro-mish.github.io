@@ -3,114 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rohit Mishra - Machine Learning Engineer</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Helvetica:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Rohit Mishra - Currently Converging</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #4a0080;
+            --secondary-color: #008080;
+            --card-bg: #f5f5f5;
+            --heading-color: #1a1a1a;
+            --link-color: #0000ff;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        header {
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            color: var(--heading-color);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .intro {
+            margin-bottom: 4rem;
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: var(--heading-color);
+        }
+        
+        .blog-post {
+            margin-bottom: 2rem;
+        }
+        
+        .blog-post h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+        
+        .blog-post .date {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        body.dark-theme {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --accent-color: #bb86fc;
+            --secondary-color: #03dac6;
+            --heading-color: #ffffff;
+            --link-color: #8ab4f8;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        .keyword {
+            color: var(--accent-color);
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+        }
+
+        .language {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .project-details a {
+            color: var(--link-color);
+        }
+
+        .email-link {
+            color: var(--link-color);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">🧠 💻</div>
-        <nav>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="emoji-container" style="position: absolute; left: 0; padding-left: 15px; font-size: 1.2em;">
+                🧠 💻 🎸
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.linkedin.com/in/ro-mish/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ro-mish" target="_blank">GitHub</a>
+                <a href="/path/to/your/resume.pdf" download class="resume-button">Download Resume</a>
+                <button class="theme-toggle" id="themeToggle">🌞</button>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Rohit Mishra</h1>
-                <p>Data Science & AI</p>
-            </div>
-            <div class="hero-image">
-                <img src="assets/img/me_photo.png" alt="Rohit Mishra" class="profile-image">
-            </div>
+        <section class="intro">
+            <h1>Hi, I'm Rohit</h1>
+            <p>— an AI Engineer and Data Scientist focused on building innovative solutions for improved usability and mobility.</p>
         </section>
+
+        <div class="sine-wave-container">
+            <svg width="100%" height="200" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFA500;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#800080;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path id="sine-wave" fill="none" stroke="url(#gradient)" stroke-width="4"></path>
+            </svg>
+        </div>
+        <style>
+            .sine-wave-container {
+                width: 100%;
+                height: 200px;
+                margin: 2rem 0;
+                overflow: hidden;
+            }
+            @keyframes moveSine {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-800px); }
+            }
+            #sine-wave {
+                animation: moveSine 10s linear infinite;
+            }
+        </style>
+        <script>
+            function generateSineWave() {
+                const path = document.getElementById('sine-wave');
+                let d = 'M -800 100';
+                for (let x = -800; x <= 1600; x++) {
+                    const y = 100 + 50 * Math.sin((x + 800) * Math.PI / 180);
+                    d += ` L ${x} ${y}`;
+                }
+                path.setAttribute('d', d);
+            }
+            generateSineWave();
+        </script>
 
         <section id="about">
-            <h2>👤 About Me</h2>
-            <p>Data Scientist at Toyota and incoming graduate student at Northwestern University. Excited by applications for AI/ML to create impactful innovations for human safety and mobility.</p>
-            <br>
-            <p>I am especially excited by ML/AI Engineering, specifically building and deploying scalable systems to address data-intensive problems.</p>
-        </section>
-        
-        <section id="blog">
-            <h2>📆 Moments</h2>
-            <div class="blog-container">
-                <article class="blog-post">
-                    <h3>Placed as Finalist in Toyota Hackathon</h3>
-                    <p class="blog-date">Jul 2022</p>
-                    <p class="blog-excerpt">Worked with my intern cohort to design a non-invasive solution to drunk driving. Helped design and develop demo, and presented in front of a large audience.</p>
-                    <a class="read-more" href="//www.toyotaconnected.com/insights/toyotaswarm-2022-36-hours-from-concept-to-creation">Read More</a>
-                </article>
-            </div>
+            <p>I've spent the past several years learning about and developing AI solutions for real-world problems. Currently, I work on AI and Data Science at Toyota Connected. I am also a graduate student at Northwestern University studying Data Science and AI.</p>
+
+            <p>I aim to partner with forward-thinking teams and organizations on ideas that shape our collective future, making processes and workflows more <span class="keyword">accessible</span>, <span class="keyword">efficient</span>, and most of all, <span class="keyword">enjoyable</span>.</p>
+            <style>
+                .keyword {
+                    font-weight: bold;
+                    display: inline-block;
+                    transition: transform 0.3s ease, color 0.3s ease;
+                }
+                .keyword:hover {
+                    transform: scale(1.1);
+                }
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
+                }
+                p:hover .keyword {
+                    animation: pulse 1.5s infinite;
+                }
+            </style>
+
+            <p>Over the past year, I've contributed to projects that have improved safety and mobility in the automotive industry, and I'm excited to apply my learnings to broader problems in the consumer space.</p>
+            
+            <p>I am also deeply inerested in music production, and love playing the guitar and messing around with midi controllers. It really does help with clarity and creativity.</p>
         </section>
 
-        <section id="projects">
-            <h2>📋 Projects</h2>
-            <div class="carousel-container projects-carousel">
-                <div class="carousel projects-carousel-inner">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p class="project-description">Description of Project 1</p>
-                        <div class="project-stats">
-                            <span class="language">Python</span>
-                            <span class="stars">★ 42</span>
-                            <span class="forks">🍴 10</span>
-                        </div>
-                        <a href="https://github.com/ro-mish/ml-theory-capstone" class="github-link" target="_blank">View on GitHub</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p class="project-description">Description of Project 1</p>
-                        <div class="project-stats">
-                            <span class="language">Python</span>
-                            <span class="stars">★ 42</span>
-                            <span class="forks">🍴 10</span>
-                        </div>
-                        <a href="https://github.com/ro-mish/ShowAndTell" class="github-link" target="_blank">View on GitHub</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p class="project-description">Description of Project 2</p>
-                        <div class="project-stats">
-                            <span class="language">Python</span>
-                            <span class="stars">★ 23</span>
-                            <span class="forks">🍴 5</span>
-                        </div>
-                        <a href="https://github.com/ro-mish/pic2prose" class="github-link" target="_blank">View on GitHub</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p class="project-description">Description of Project 2</p>
-                        <div class="project-stats">
-                            <span class="language">Python</span>
-                            <span class="stars">★ 23</span>
-                            <span class="forks">🍴 5</span>
-                        </div>
-                        <a href="https://github.com/ro-mish/AnomalyDetection" class="github-link" target="_blank">View on GitHub</a>
-                    </div>
-                    <!-- Add more project cards as needed -->
+        <h2>What you can expect from me:</h2>
+        <style>
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .card {
+                position: relative;
+                width: 100%;
+                padding: 20px;
+                background-color: var(--card-bg);
+                border: 1px solid #ddd;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            .card h3 {
+                margin-bottom: 10px;
+            }
+            .card p {
+                margin-bottom: 15px;
+            }
+            .card-details {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            .card:hover .card-details {
+                max-height: 200px;
+                opacity: 1;
+            }
+            .card-details ul {
+                list-style-type: none;
+                padding: 0;
+                text-align: left;
+            }
+            .card-details li {
+                margin-bottom: 5px;
+            }
+        </style>
+        <div class="card-container">
+            <div class="card">
+                <h3>AI Expertise</h3>
+                <p>Diverse experience in <strong>ML</strong>, <strong>Deep Learning</strong>, and <strong>Analytics</strong>. Never compromising on Software Engineering best practices and focused on bringing fresh perspectives to complex problems.</p>
+                <div class="card-details">
+                    <h6>Highlights:</h6>
+                    <ul>
+                        <li>Developing AI solutions for automotive safety at Toyota Connected</li>
+                        <li>Created open-source projects for practical data science workflows</li>
+                        <li>Conducted research at Belkin Lab at UC San Diego, Halicioglu Data Science Institute</li>
+                        <li>Pursuing graduate studies in Data Science and AI at Northwestern University</li>
+                    </ul>
                 </div>
-                <button class="carousel-button prev projects-prev">&lt;</button>
-                <button class="carousel-button next projects-next">&gt;</button>
             </div>
+
+            <div class="card">
+                <h3>Collaborative Innovation</h3>
+                <p>A commitment to <strong>understand problems</strong>, <strong>challenge assumptions</strong>, and <strong>connect the dots</strong>—joining teams with conviction and openness to create robust solutions.</p>
+                <div class="card-details">
+                    <h6>Highlights:</h6>
+                    <ul>
+                        <li>Published 2 patents in the field of AI for mobility with team at Toyota Connected</li>
+                        <li>Won 2nd place at Toyota's Global Hackathon for Drunk Driving Detection/Prevention</li>
+                        <li>Collaborated with peers to study feature extraction scalabity at UC San Diego</li>
+                        <li>Mentored undergraduate and high school students in AI and Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-container">
+                <div class="project-list">
+                    <div class="project-card">
+                        <h3>pic2prose</h3>
+                        <p>Bridging OCR and NLP.</p>
+                        <div class="project-details">
+                            <span class="language">Python</span>
+                            <a href="https://github.com/ro-mish/pic2prose" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>ShowAndTell</h3>
+                        <p>Classifying human emotion and using Generative Models to aid in film production.</p>
+                        <div class="project-details">
+                            <span class="language">Python</span>
+                            <a href="https://github.com/ro-mish/ShowAndTell" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>GridSculpt</h3>
+                        <p>Formerly "VanGo". PyPi package that takes in a photo of a 2x2 grid and formats matplotlib plots according to provided dimensions.</p>
+                        <div class="project-details">
+                            <span class="language">Python</span>
+                            <a href="https://github.com/ro-mish/GridSculpt" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-list">
+                    <div class="project-card">
+                        <h3>ml-theory-capstone</h3>
+                        <p>Senior Data Science Capstone Project advised by Mikhail Belkin and Parthe Pandit.</p>
+                        <div class="project-details">
+                            <span class="language">Jupyter Notebook</span>
+                            <a href="https://github.com/ro-mish/ml-theory-capstone" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>AnomalyDetection</h3>
+                        <p>Different heuristic and ML methods to detect outliers and anomalies in cloud observability data</p>
+                        <div class="project-details">
+                            <span class="language">Jupyter Notebook</span>
+                            <a href="https://github.com/ro-mish/AnomalyDetection" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .project-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .project-list {
+                width: calc(50% - 1rem);
+            }
+            .project-card {
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+                background-color: var(--card-bg);
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+            .project-card h3 {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-size: 1.5rem;
+            }
+            .project-card p {
+                margin-bottom: 1rem;
+            }
+            .project-details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .language {
+                background-color: var(--accent-color);
+                color: var(--bg-color);
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-size: 0.875rem;
+            }
+            .project-details a {
+                color: var(--link-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            .project-details a:hover {
+                color: var(--secondary-color);
+            }
+            @media (max-width: 768px) {
+                .project-container {
+                    flex-direction: column;
+                }
+                .project-list {
+                    width: 100%;
+                }
+            }
+        </style>
+
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p>Need help with your project, or have questions about how to apply AI/ML, or just want to chat? Reach out, and let's get to work.</p>
+            <style>
+                .email-icon {
+                    font-size: 32px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+                .email-link {
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+            <a href="mailto:rohitnmishra2@gmail.com" class="email-link">
+                <span class="email-icon">📧</span>
+                rohitnmishra2@gmail.com
+            </a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Rohit Mishra. All rights reserved.</p>
-    </footer>
-    <script src="js/carousel.js" defer></script>
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            updateThemeToggle();
+        });
+
+        function updateThemeToggle() {
+            if (body.classList.contains('dark-theme')) {
+                themeToggle.textContent = '🌙';
+            } else {
+                themeToggle.textContent = '🌞';
+            }
+        }
+
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDarkScheme.matches)) {
+            body.classList.add('dark-theme');
+        }
+        updateThemeToggle();
+    </script>
 </body>
 </html>
