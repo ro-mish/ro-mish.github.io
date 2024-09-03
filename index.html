@@ -175,7 +175,7 @@
     <main>
         <section class="intro">
             <h1>Hi, I'm Rohit</h1>
-            <p>— an AI Engineer and Data Scientist focused on building innovative solutions for improved usability and mobility.</p>
+            <p>— an AI Engineer & Data Scientist focused on building data-powered solutions to augment applications and mobility.</p>
         </section>
 
         <div class="sine-wave-container">
@@ -300,16 +300,24 @@
                 transition: all 0.3s ease;
             }
             .card:hover .card-details, .card.active .card-details {
-                max-height: 200px;
+                max-height: none;
                 opacity: 1;
             }
             .card-details ul {
                 list-style-type: none;
-                padding: 0;
+                padding-left: 0;
                 text-align: left;
             }
             .card-details li {
                 margin-bottom: 5px;
+                position: relative;
+                padding-left: 20px;
+            }
+            .card-details li:before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: var(--accent-color);
             }
             @media (max-width: 768px) {
                 .card:hover .card-details {
@@ -317,7 +325,7 @@
                     opacity: 0;
                 }
                 .card.active .card-details {
-                    max-height: 200px;
+                    max-height: none;
                     opacity: 1;
                 }
             }
@@ -470,7 +478,7 @@
 
         <section id="contact">
             <h2>Let's Connect</h2>
-            <p>Need help with your project, or have questions about how to apply AI/ML, or just want to chat? Reach out, and let's get to work.</p>
+            <p>Need help with your project, or have questions about how to apply AI/ML to your use-case, or just want to chat? Reach out, and let's get to work.</p>
             <style>
                 .email-icon {
                     font-size: 32px;
