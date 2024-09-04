@@ -181,12 +181,17 @@
         <div class="sine-wave-container">
             <svg width="100%" height="200" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
                 <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient id="sine-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style="stop-color:#FFA500;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#800080;stop-opacity:1" />
                     </linearGradient>
+                    <linearGradient id="cosine-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#800080;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                    </linearGradient>
                 </defs>
-                <path id="sine-wave" fill="none" stroke="url(#gradient)" stroke-width="4"></path>
+                <path id="sine-wave" fill="none" stroke="url(#sine-gradient)" stroke-width="4"></path>
+                <path id="cosine-wave" fill="none" stroke="url(#cosine-gradient)" stroke-width="4"></path>
             </svg>
         </div>
         <style>
@@ -198,7 +203,7 @@
             }
             @keyframes moveSine {
                 0% { transform: translateX(0); }
-                100% { transform: translateX(-800px); }
+                100% { transform: translateX(-1600px); }
             }
             @keyframes pulseGlow {
                 0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.7)); }
@@ -206,11 +211,8 @@
             }
             #sine-wave, #cosine-wave {
                 animation: 
-                    moveSine 10s linear infinite,
-                    pulseGlow 2s ease-in-out infinite;
-            }
-            #cosine-wave {
-                animation-delay: -5s, 1s;
+                    moveSine 20s linear infinite,
+                    pulseGlow 4s ease-in-out infinite;
             }
         </style>
         <script>
@@ -219,7 +221,7 @@
                 const cosinePath = document.getElementById('cosine-wave');
                 let sineD = 'M -800 100';
                 let cosineD = 'M -800 100';
-                for (let x = -800; x <= 1600; x++) {
+                for (let x = -800; x <= 2400; x++) {
                     const sineY = 100 + 50 * Math.sin((x + 800) * Math.PI / 180);
                     const cosineY = 100 + 50 * Math.cos((x + 800) * Math.PI / 180);
                     sineD += ` L ${x} ${sineY}`;
@@ -333,7 +335,7 @@
         <div class="card-container">
             <div class="card">
                 <h3>AI Expertise</h3>
-                <p>Diverse experience in <strong>ML</strong>, <strong>Deep Learning</strong>, and <strong>Analytics</strong>. Never compromising on Software Engineering best practices and focused on bringing fresh perspectives to complex problems.</p>
+                <p>Diverse experience in <strong>ML</strong>, <strong>Deep Learning</strong>, <strong>Gen AI</strong>, and <strong>Analytics</strong>. Never compromising on Software Engineering best practices and focused on bringing fresh perspectives to complex problems.</p>
                 <div class="card-details">
                     <p>Highlights:</p>
                     <ul>
@@ -478,7 +480,7 @@
 
         <section id="contact">
             <h2>Let's Connect</h2>
-            <p>Need help with your project, or have questions about how to apply AI/ML to your use-case, or just want to chat? Reach out, and let's get to work.</p>
+            <p>Need help with your project, or wondering how to apply AI/ML to your use-case, or just have a question? Reach out, and let's get to work.</p>
             <style>
                 .email-icon {
                     font-size: 32px;
@@ -491,12 +493,18 @@
                     text-decoration: none;
                     color: inherit;
                 }
+                .calendly-inline-widget {
+                    min-width: 320px;
+                    height: 630px;
+                    margin-top: 20px;
+                }
             </style>
             <a href="mailto:rohitnmishra2@gmail.com" class="email-link">
                 <span class="email-icon">📧</span>
                 rohitnmishra2@gmail.com
             </a>
         </section>
+        
     </main>
 
     <script>
