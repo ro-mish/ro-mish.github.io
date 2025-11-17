@@ -3,323 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Mishra - AI/ML Engineer & Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #555555;
-            --accent-color: #2b6cb0; /* A subtle blue accent color */
-            --secondary-color: #666666;
-            --card-bg: #ffffff;
-            --heading-color: #222222;
-            --link-color: #2b6cb0;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-        }
-        
-        header {
-            position: sticky;
-            top: 0;
-            background-color: var(--bg-color);
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            border-bottom: 1px solid #eaeaea;
-            z-index: 999;
-        }
-        
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-left: 0;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: var(--accent-color);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 5%;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--heading-color);
-            line-height: 1.2;
-        }
-
-        .intro-tagline {
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--secondary-color);
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-top: 6rem;
-            margin-bottom: 2rem;
-            color: var(--heading-color);
-            position: relative;
-        }
-
-        h2:after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--accent-color);
-            margin-top: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: var(--text-color);
-        }
-        
-        .intro {
-            margin-bottom: 6rem;
-            max-width: 800px;
-        }
-        
-        .profile-image {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-            margin: 2rem 0;
-            display: block;
-        }
-        
-        .card {
-            background-color: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            border: 1px solid #eaeaea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card h3 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--heading-color);
-        }
-        
-        /* Blog posts */
-        .blog-posts {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .blog-post {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
-        }
-        
-        .blog-post h3 {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            color: var(--heading-color);
-        }
-        
-        .post-meta {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-        
-        .post-meta .tags {
-            margin-left: 1rem;
-        }
-        
-        .preview {
-            margin-bottom: 1.5rem;
-        }
-        
-        .read-more {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .read-more:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Expertise and About Sections */
-        .expertise-section {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .expertise-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: var(--card-bg);
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
-        }
-        
-        .expertise-item h3 {
-            color: var(--heading-color);
-            margin-bottom: 1rem;
-        }
-        
-        .expertise-item ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 1rem;
-        }
-        
-        .expertise-item li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .expertise-item li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        /* Projects */
-        .project-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .project-list {
-            flex: 1;
-            min-width: 300px;
-        }
-        .project-card {
-            margin-bottom: 1.5rem;
-            padding: 1.25rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .project-card h3 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-            color: var(--heading-color);
-        }
-        .project-card p {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-        .project-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .language {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.875rem;
-        }
-        .project-details a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .project-details a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Contact */
-        .email-icon {
-            font-size: 32px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        .email-link {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            .project-container {
-                flex-direction: column;
-            }
-            .project-list {
-                width: 100%;
-            }
-        }
-
-        .keyword {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        .divider {
-            margin: 4rem 0;
-            border-bottom: 1px solid #eaeaea;
-        }
-    </style>
+    <title>Rohit Mishra - Sr. AI/ML Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
@@ -335,135 +21,103 @@
 
     <main>
         <section class="intro">
-            <h1>Hi, I'm Rohit</h1>
-            <p class="intro-tagline">— AI/ML Engineer & Data Scientist</p>
+            <h1>Rohit Mishra</h1>
+            <img src="assets/img/saddle_point.png" alt="Animated visual for Rohit Mishra" class="profile-image">
         </section>
 
-        <section id="about">
-            <h2>TLDR about me:</h2>
-
+        <section id="about" class="section-content">
+            <h2>About</h2>
             <p>
-                I currently work on AI/ML at Toyota Connected and am in graduate school at Northwestern University.
-                My focus is on building <span class="keyword">reliable</span>, <span class="keyword">efficient</span>, and <span class="keyword">scalable</span> AI solutions.
+                At Ironclad, I build agentic AI systems that operate across Legal AI workflows, and massive, unstructured workloads.
             </p>
             <p>
-                Over the past year, I've contributed to projects improving customer experience, safety, and mobility through AI. I'm excited to apply AI to broader consumer challenges.
+                Previously, at Toyota, I worked on advanced AI products and programs, helped secure 7-figures in research funding, and co-invented patented methods in real-time decision systems and model evaluation. I’ve operated across large telemetry pipelines, distributed compute, and production-grade LLM architectures.
             </p>
             <p>
-                I also love music production. I switch off between playing the guitar, experimenting with mixing audio, and working with artists.
+                I’ve advised founders, engineers, and operators building with AI, and mentored people entering the field. 
+                My focus has been consistently on creating intelligent systems that stand up to real-world complexity and deliver without hand-holding.
+                I'm interested in evaluation systems for multi-modal AI systems and building optimized inference engines.
             </p>
-            <!-- <h3 style="margin-top: 3rem;">Key Highlights:</h3>
-            <ul>
-                <li>AI Engineer focused on mobility and consumer experiences</li>
-                <li>Graduate student at Northwestern University (Data Science & AI)</li>
-                <li>Experience in developing scalable AI pipelines and ML best practices</li>
-                <li>Enthusiastic about music production and creative experimentation</li>
-            </ul> -->
         </section>
 
         <div class="divider"></div>
 
-        <h2>What I bring:</h2>
-        <div class="expertise-section">
-            <div class="expertise-item">
-                <h3>AI/ML Expertise</h3>
-                <p>
-                    Diverse experience across <strong>ML</strong>: Classical ML techniques,<strong>Deep Learning</strong>, <strong>Generative AI</strong>, 
-                    and <strong>Analytics</strong>. My goal is to build solutions that are both powerful and maintainable, leveraging software 
-                    engineering best practices.
-                </p>
-                <ul>
-                    <li>Developing generative AI solutions for customer experience and automotive safety at Toyota Connected</li>
-                    <li>Created open-source projects enhancing data science workflows</li>
-                    <li>Conducted research at Belkin Lab @ Halicioglu Data Science Institute, UC San Diego</li>
-                    <li>Pursuing graduate studies in Data Science and AI at Northwestern University</li>
-                </ul>
-            </div>
-
-            <div class="expertise-item">
-                <h3>Prioritizing Innovation</h3>
-                <ul>
-                    <li>Co-inventor on 2 AI-related patents in sustainable mobility at Toyota Connected</li>
-                    <li>Finalist at Toyota’s Global Hackathon for drunk driving detection/prevention</li>
-                    <li>Collaborated on scalable feature extraction strategies at Deep Learning research lab at UC San Diego</li>
-                    <li>Mentored students in AI and Computer Science</li>
-                </ul>
-            </div>
-        </div>
+        <section class="section-content">
+            <h2>Experience</h2>
+            <ul class="highlight-list">
+                <li>Built and deployed agentic AI systems powering large-scale document intelligence at Ironclad</li>
+                <li>Co-inventor on multiple patented AI methods in real-time decision systems and sustainable mobility</li>
+                <li>Led high-impact AI programs funded by Toyota’s global innovation arm, spanning research, prototyping, and production deployment</li>
+                <li>Research experience at UC San Diego’s Halıcıoğlu Data Science Institute under Prof. Belkin, working across ML theory, optimization, and practical model behavior</li>
+                <li>Completed graduate studies in Data Science &amp; AI at Northwestern University; bachelor’s in Data Science at UC San Diego</li>
+                <li>Product-driven ML engineer recognized as a finalist in Toyota’s global hackathon for applied safety systems</li>
+                <li>Advisor to founders and builders on architecting and shipping AI-powered products with real-world constraints</li>
+                <li>Active contributor to open-source AI tooling and mentor across applied ML, LLM systems, and builder-focused workflows</li>
+            </ul>
+        </section>
 
         <div class="divider"></div>
         
-        <section id="blog"></section>
-            <h2>Blog</h2>
-            <p>Coming soon!</p>
-        </section>
-
-        <div class="divider"></div>
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-container">
-                <div class="project-list">
-                    <div class="project-card">
-                        <h3>vrep</h3>
-                        <p>Quick viz for grokking your repo.</p>
-                        <div class="project-details">
-                            <span class="language">Python</span>
-                            <a href="https://github.com/ro-mish/vrep" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>pic2prose</h3>
-                        <p>Bridging OCR and NLP for automated text extraction and summarization.</p>
-                        <div class="project-details">
-                            <span class="language">Python</span>
-                            <a href="https://github.com/ro-mish/pic2prose" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>ShowAndTell</h3>
-                        <p>Using emotion classification and generative models to aid in film production.</p>
-                        <div class="project-details">
-                            <span class="language">Python</span>
-                            <a href="https://github.com/ro-mish/ShowAndTell" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>GridSculpt</h3>
-                        <p>A PyPi package that formats matplotlib plots based on a 2x2 grid input.</p>
-                        <div class="project-details">
-                            <span class="language">Python</span>
-                            <a href="https://github.com/ro-mish/GridSculpt" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
+        <section id="projects" class="section-content">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>vrep</h3>
+                    <p>Visualize repositories to reduce cognitive load. Quick insights for understanding codebases.</p>
+                    <span class="project-tag">Python</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/vrep" target="_blank" class="project-link">View on GitHub</a>
                     </div>
                 </div>
-                <div class="project-list">
-                    <div class="project-card">
-                        <h3>ml-theory-capstone</h3>
-                        <p>Undergraduate capstone advised by Mikhail Belkin, exploring theoretical ML insights.</p>
-                        <div class="project-details">
-                            <span class="language">Jupyter Notebook</span>
-                            <a href="https://github.com/ro-mish/ml-theory-capstone" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
+                <div class="project-item">
+                    <h3>pic2prose</h3>
+                    <p>OCR meets NLP. Automated text extraction and summarization from images.</p>
+                    <span class="project-tag">Python</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/pic2prose" target="_blank" class="project-link">View on GitHub</a>
                     </div>
-                    <div class="project-card">
-                        <h3>AnomalyDetection</h3>
-                        <p>Applying heuristics and ML methods to detect outliers in cloud observability data.</p>
-                        <div class="project-details">
-                            <span class="language">Jupyter Notebook</span>
-                            <a href="https://github.com/ro-mish/AnomalyDetection" target="_blank" class="glow-button">View on GitHub</a>
-                        </div>
+                </div>
+                <div class="project-item">
+                    <h3>ShowAndTell</h3>
+                    <p>Emotion classification and generative models for film production workflows.</p>
+                    <span class="project-tag">Python</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/ShowAndTell" target="_blank" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>GridSculpt</h3>
+                    <p>PyPi package for formatting matplotlib plots with a clean 2x2 grid system.</p>
+                    <span class="project-tag">Python</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/GridSculpt" target="_blank" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>ml-theory-capstone</h3>
+                    <p>Theoretical ML research advised by Mikhail Belkin. Exploring deep learning fundamentals.</p>
+                    <span class="project-tag">Research</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/ml-theory-capstone" target="_blank" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>AnomalyDetection</h3>
+                    <p>Heuristics and ML methods for detecting outliers in cloud observability data.</p>
+                    <span class="project-tag">ML</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/ro-mish/AnomalyDetection" target="_blank" class="project-link">View on GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <div class="divider"></div>
-
-        <section id="contact">
-            <h2>Let's Connect</h2>
-            <p>If you’d like to discuss AI/ML applications, ask a question, or explore potential collaborations, feel free to reach out!</p>
+        
+        <section id="contact" class="section-content">
+            <h2>Contact</h2>
+            <p>Let's build something together.</p>
             <a href="mailto:rohitnmishra2@gmail.com" class="email-link">
-                <span class="email-icon">📧</span>
                 rohitnmishra2@gmail.com
             </a>
         </section>
