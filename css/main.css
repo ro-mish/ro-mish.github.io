@@ -54,9 +54,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 24px 16px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* LIDAR/Sensor point cloud canvas */
@@ -91,10 +91,10 @@ body::before {
 /* Device Frame - K.O. II Style with chassis feel */
 .device {
     background: linear-gradient(180deg, var(--device-light) 0%, var(--device) 40%, var(--device-edge) 100%);
-    border-radius: 24px;
+    border-radius: 22px;
     padding: 0;
-    max-width: 560px;
-    width: 100%;
+    max-width: 585px;
+    width: calc(100% - 32px);
     position: relative;
     z-index: 1;
     box-shadow: 
@@ -109,6 +109,8 @@ body::before {
     border: 3px solid #b8b4ae;
     border-top-color: #ccc8c2;
     border-bottom-color: #a09c98;
+    transform: scale(0.9);
+    transform-origin: center center;
 }
 
 /* Ambient light reflection layer */
@@ -1654,25 +1656,26 @@ footer {
     
     .device {
         border-radius: 14px;
+        width: calc(100% - 16px);
     }
     
     .device-label {
-        font-size: 1.3rem;
-        left: 18px;
-        top: 18px;
+        font-size: 1.2rem;
+        left: 16px;
+        top: 16px;
     }
     
     header {
-        margin: 50px 18px 0;
+        margin: 44px 14px 0;
     }
     
     main {
-        padding: 18px;
+        padding: 14px;
     }
     
     .oscilloscope {
-        margin: 0 18px 14px;
-        width: calc(100% - 36px);
+        margin: 0 14px 12px;
+        width: calc(100% - 28px);
         height: 90px;
     }
     
