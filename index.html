@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohit Mishra</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <canvas id="point-cloud"></canvas>
     <div class="device">
+        <div class="ambient-light"></div>
+        <div class="device-screw top-left"></div>
+        <div class="device-screw top-right"></div>
+        <div class="device-screw bottom-left"></div>
+        <div class="device-screw bottom-right"></div>
         <div class="device-label">RM</div>
         
         <header>
             <div class="display">
                 <div class="display-left">
                     <span class="display-mode" id="current-mode">WHO</span>
-                    <span class="display-title" id="display-title">Rohit Mishra</span>
+                    <span class="display-title" id="display-title">ROHIT MISHRA</span>
                 </div>
                 <div class="display-right">
                     <div class="vu-meter">
@@ -28,8 +34,9 @@
                         <span class="vu-bar active"></span>
                         <span class="vu-bar active"></span>
                     </div>
-                    <span class="display-status"><span class="blink">●</span> SF</span>
+                    <span class="display-status"><span class="status-led online"></span> SF</span>
                 </div>
+                <div class="glass-layer"></div>
             </div>
         </header>
 
@@ -41,36 +48,49 @@
                         <button class="key key-orange active" data-mode="who">WHO</button>
                         <button class="key key-green" data-mode="work">WORK</button>
                         <button class="key key-blue" data-mode="build">BUILD</button>
-                        <button class="key key-gray" data-mode="connect">CONNECT</button>
                     </div>
                 </div>
             </section>
 
-            <!-- WHO MODE: About -->
+            <!-- WHO MODE: About + Connect -->
             <section class="output-panel" id="panel-who">
+                <div class="glass-layer"></div>
                 <div class="panel-header">
                     <span class="panel-label">ABOUT</span>
                     <span class="panel-indicator">◆</span>
                 </div>
                 <div class="panel-content">
                     <div class="prose-section">
-                        <div class="cycle-display">
-                            <span class="cycle-prefix">Endlessly sparked by</span>
-                            <div class="cycle-word-container">
-                                <span class="cycle-word" id="cycle-word">curiosity</span>
-                            </div>
-                        </div>
                         <p>I build AI systems that people use every day.</p>
 
-                        <p>I've advised early-stage founders on AI strategy, have consulted for GTM teams at Frontier AI Labs, and mentored students working on their first projects.</p>
+                        <p>I've advised early-stage founders on AI strategy, have consulted for GTM teams at Frontier AI Labs, and mentored student projects.</p>
                         
-                        <p>Currently interested in building audio AI systems.</p>
+                        <p>Interested in building audio systems right now.</p>
+                    </div>
+                    
+                    <div class="link-grid">
+                        <a href="https://www.linkedin.com/in/ro-mish/" target="_blank" class="link-tile">
+                            <span class="link-icon">in</span>
+                            <span class="link-name">LinkedIn</span>
+                            <span class="link-arrow">↗</span>
+                        </a>
+                        <a href="https://github.com/ro-mish" target="_blank" class="link-tile">
+                            <span class="link-icon">◈</span>
+                            <span class="link-name">GitHub</span>
+                            <span class="link-arrow">↗</span>
+                        </a>
+                        <a href="mailto:rohitnmishra2@gmail.com" class="link-tile">
+                            <span class="link-icon">@</span>
+                            <span class="link-name">Email</span>
+                            <span class="link-arrow">→</span>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <!-- WORK MODE: Timeline Slider -->
             <section class="output-panel hidden" id="panel-work">
+                <div class="glass-layer"></div>
                 <div class="panel-header">
                     <span class="panel-label">TIMELINE</span>
                     <span class="panel-year" id="timeline-year">2025</span>
@@ -112,6 +132,7 @@
 
             <!-- BUILD MODE: GitHub + Patents + Research -->
             <section class="output-panel hidden" id="panel-build">
+                <div class="glass-layer"></div>
                 <div class="panel-header">
                     <span class="panel-label">SOURCE</span>
                     <span class="panel-indicator">◈</span>
@@ -162,24 +183,12 @@
 
             <!-- CONNECT MODE: Links + Music -->
             <section class="output-panel hidden" id="panel-connect">
+                <div class="glass-layer"></div>
                 <div class="panel-header">
                     <span class="panel-label">CHANNELS</span>
                     <span class="panel-indicator">◇</span>
                 </div>
                 <div class="panel-content">
-                    <a href="https://open.spotify.com/track/4oiSUA3xosXHlqPd4fswUU" target="_blank" class="track-card">
-                        <div class="track-art">
-                            <div class="track-wave">
-                                <span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="track-info">
-                            <span class="track-label">NOW PLAYING</span>
-                            <span class="track-title">Orange Mango</span>
-                            <span class="track-artist">Something I played guitar on with my friend.</span>
-                        </div>
-                        <span class="track-play">▶</span>
-                    </a>
                     <div class="link-grid">
                         <a href="https://www.linkedin.com/in/ro-mish/" target="_blank" class="link-tile">
                             <span class="link-icon">in</span>
@@ -251,7 +260,7 @@
         ];
 
         const modeDisplayTitles = {
-            who: 'Rohit Mishra',
+            who: 'ROHIT MISHRA',
             work: 'WHERE I\'VE BEEN',
             build: 'WHAT I\'VE MADE',
             connect: 'SAY HI'
@@ -274,7 +283,12 @@
                 displayTitle.textContent = modeDisplayTitles[mode];
                 
                 panels.forEach(p => p.classList.add('hidden'));
-                document.getElementById(`panel-${mode}`).classList.remove('hidden');
+                const activePanel = document.getElementById(`panel-${mode}`);
+                activePanel.classList.remove('hidden');
+                
+                // CRT screen flicker effect on mode switch
+                activePanel.classList.add('flickering');
+                setTimeout(() => activePanel.classList.remove('flickering'), 300);
             });
         });
 
@@ -301,24 +315,7 @@
             updateTimeline(parseInt(e.target.value));
         });
 
-        // Word cycle animation - fade in/out
-        const cycleWords = ['curiosity', 'discovery', 'creation', 'ideation'];
-        const cycleWordEl = document.getElementById('cycle-word');
-        let wordIndex = 0;
-
-        function cycleWord() {
-            cycleWordEl.classList.add('fade-out');
-            
-            setTimeout(() => {
-                wordIndex = (wordIndex + 1) % cycleWords.length;
-                cycleWordEl.textContent = cycleWords[wordIndex];
-                cycleWordEl.classList.remove('fade-out');
-            }, 500);
-        }
-
-        setInterval(cycleWord, 2500);
-
-        // Three.js Oscilloscope Wave Visualization
+        // Oscilloscope Wave Visualization
         (function() {
             const canvas = document.getElementById('wave-canvas');
             const container = canvas.parentElement;
@@ -530,5 +527,6 @@
             });
         })();
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
